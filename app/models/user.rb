@@ -27,6 +27,8 @@ class User < ActiveRecord::Base
   has_many :cadreurs
   has_many :scenaristes
   has_many :dirphots
+  has_many :chef_electriciens
+
 
 
 

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :chef_electriciens
   resources :dirphots
   resources :scenaristes
   resources :cadreurs

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prenom:</strong>
+  <%= @chef_electricien.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @chef_electricien.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @chef_electricien.email %>
+</p>
+
+<p>
+  <strong>Equipe:</strong>
+  <%= @chef_electricien.equipe %>
+</p>
+
+<p>
+  <strong>Info carriere:</strong>
+  <%= @chef_electricien.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @chef_electricien.ambition %>
+</p>
+
+
+
+
+<% if chef_electricien_author(@chef_electricien) %>
+  <%= link_to 'Edit', edit_chef_electricien_path(@chef_electricien) %> |
+  <%= link_to 'Delete', @chef_electricien, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', chef_electriciens_path %>
