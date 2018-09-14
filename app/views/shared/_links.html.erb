@@ -1,0 +1,39 @@
+<div id="links" class="well">
+  
+  <h5>
+    <%= fa_icon 'lightbulb-o' %>
+    <%= link_to 'Voir tous les métiers', show_listecat_path %>
+  </h5>
+  <h5>
+    <%= fa_icon 'newspaper-o' %>
+    <%= link_to 'Actualités', root_path %>
+  </h5>
+  <h5>
+    <%= fa_icon 'calendar-o' %>
+    <%= link_to 'Créer un évènement', new_event_path %>
+  </h5>
+  <h5>
+    <%= fa_icon 'calendar-o' %>
+    <%= link_to 'Calendrier', calendar_events_path %>
+  </h5>
+  <h5>
+    <%= fa_icon 'arrow-circle-right' %>
+    <%= link_to 'Amis', friends_user_path(current_user) %>
+  </h5>
+  <h5>
+    <%= fa_icon 'arrow-circle-left' %>
+    <%= link_to 'Followers', followers_user_path(current_user) %>
+  </h5>
+  <h5>
+    <%= fa_icon 'search' %>
+    <%= link_to('Trouver des amis', find_friends_path)%>
+  </h5>
+  <%# <h5>
+    <%= fa_icon 'pencil' %>
+    <%#= link_to 'Editer le Profil', edit_user_path(current_user) %>
+  <%# </h5>
+  <h5> %>
+    <%#= fa_icon 'lock' %>
+    <%#= link_to 'Changer le mots de passe', edit_user_registration_path %>
+  <%# </h5> %>
+</div>

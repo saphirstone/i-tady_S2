@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chef Operateurs</h1>
+
+<% @chef_operateurs.each do |chef_operateur| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= chef_operateur_path(chef_operateur.id) %>"><%= chef_operateur.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= chef_operateur.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= chef_operateur.email %></p>
+                            </div>
+                            <a href="<%= chef_operateur_path(chef_operateur.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+
+<br>
+
+<%= link_to 'New Chef Operateur', new_chef_operateur_path %>

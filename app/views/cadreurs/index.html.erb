@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cadreurs</h1>
+
+<% @cadreurs.each do |cadreur| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= cadreur_path(cadreur.id) %>"><%= cadreur.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= cadreur.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= cadreur.email %></p>
+                            </div>
+                            <a href="<%= cadreur_path(cadreur.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+
+<br>
+
+<%= link_to 'New cadreur', new_cadreur_path %>

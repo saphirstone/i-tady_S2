@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chef Decorateurs</h1>
+
+<% @chef_decorateurs.each do |chef_decorateur| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= chef_decorateur_path(chef_decorateur.id) %>"><%= chef_decorateur.nom_et_prenom %></a>
+                                </h4>
+                                
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= chef_decorateur.email %></p>
+                            </div>
+                            <a href="<%= chef_decorateur_path(chef_decorateur.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+
+<br>
+
+<%= link_to 'New Chef Decorateur', new_chef_decorateur_path %>

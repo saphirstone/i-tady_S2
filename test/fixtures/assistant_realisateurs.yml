@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom_et_prenom: MyText
+  poste: MyText
+  email: MyText
+  info_carriere: MyText
+  ambition: MyString
+
+two:
+  nom_et_prenom: MyText
+  poste: MyText
+  email: MyText
+  info_carriere: MyText
+  ambition: MyString

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Maquilleurs</h1>
+
+
+<% @makeups.each do |makeup| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= makeup_path(makeup.id) %>"><%= makeup.nom_et_prenom %></a>
+                                </h4>
+                                
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= makeup.email %></p>
+                            </div>
+                            <a href="<%= makeup_path(makeup.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+
+<br>
+
+<br>
+
+<%= link_to 'New Makeup', new_makeup_path %>

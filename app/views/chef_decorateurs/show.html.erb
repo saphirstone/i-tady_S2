@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prénom:</strong>
+  <%= @chef_decorateur.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @chef_decorateur.email %>
+</p>
+
+<p>
+  <strong>Info carrière:</strong>
+  <%= @chef_decorateur.info_carriere %>
+</p>
+
+<p>
+  <strong>Spécialité:</strong>
+  <%= @chef_decorateur.specialite %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @chef_decorateur.ambition %>
+</p>
+
+
+<% if chef_decorateur_author(@chef_decorateur) %>
+  <%= link_to 'Edit', edit_chef_decorateur_path(@chef_decorateur) %> |
+  <%= link_to 'Delete', @chef_decorateur, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', chef_decorateurs_path %>

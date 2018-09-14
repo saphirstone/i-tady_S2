@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prenom:</strong>
+  <%= @regiseur.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @regiseur.email %>
+</p>
+
+<p>
+  <strong>Info carriere:</strong>
+  <%= @regiseur.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @regiseur.ambition %>
+</p>
+
+<p>
+  <strong>Projet:</strong>
+  <%= @regiseur.projet %>
+</p>
+
+
+<% if regiseur_author(@regiseur) %>
+  <%= link_to 'Edit', edit_regiseur_path(@regiseur) %> |
+  <%= link_to 'Delete', @regiseur, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', regiseurs_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dirphots</h1>
+
+<% @dirphots.each do |dirphot| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= dirphot_path(dirphot.id) %>"><%= dirphot.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= dirphot.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= dirphot.email %></p>
+                            </div>
+                            <a href="<%= dirphot_path(dirphot.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+
+<br>
+
+<%= link_to 'New Dirphot', new_dirphot_path %>

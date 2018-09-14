@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prenom:</strong>
+  <%= @monteur_video.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @monteur_video.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @monteur_video.email %>
+</p>
+
+<p>
+  <strong>Equipement:</strong>
+  <%= @monteur_video.equipement %>
+</p>
+
+<p>
+  <strong>Info carriere:</strong>
+  <%= @monteur_video.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @monteur_video.ambition %>
+</p>
+
+
+<% if monteur_video_author(@monteur_video) %>
+  <%= link_to 'Edit', edit_monteur_video_path(@monteur_video) %> |
+  <%= link_to 'Delete', @monteur_video, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', monteur_videos_path %>

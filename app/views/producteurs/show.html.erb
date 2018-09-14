@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prenom:</strong>
+  <%= @producteur.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @producteur.email %>
+</p>
+
+<p>
+  <strong>Info carriere:</strong>
+  <%= @producteur.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @producteur.ambition %>
+</p>
+
+
+<% if producteur_author(@producteur) %>
+  <%= link_to 'Edit', edit_producteur_path(@producteur) %> |
+  <%= link_to 'Delete', @producteur, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', producteurs_path %>

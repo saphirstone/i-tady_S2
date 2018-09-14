@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="text-center">Assistant Realisateurs</h1>
+
+<% @assistant_realisateurs.each do |assistant_realisateur| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%=assistant_realisateur_path(assistant_realisateur.id) %>"><%= assistant_realisateur.nom_et_prenom %></a>
+                                </h4>
+                                
+                            </div>
+                            <div class="right">
+                                    <p><%= assistant_realisateur.numero %></p>
+                                    <p><%= assistant_realisateur.email %></p>
+                            </div>
+                            <a href="<%= assistant_realisateur_path(assistant_realisateur.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+<div class="buttn"><%= link_to 'New Assistant Realisateur', new_assistant_realisateur_path %></div>

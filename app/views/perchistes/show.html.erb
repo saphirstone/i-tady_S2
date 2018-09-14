@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prenom:</strong>
+  <%= @perchiste.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @perchiste.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @perchiste.email %>
+</p>
+
+<p>
+  <strong>Equipement:</strong>
+  <%= @perchiste.equipement %>
+</p>
+
+<p>
+  <strong>Info carriere:</strong>
+  <%= @perchiste.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @perchiste.ambition %>
+</p>
+
+
+
+<% if perchiste_author(@perchiste) %>
+  <%= link_to 'Edit', edit_perchiste_path(@perchiste) %> |
+  <%= link_to 'Delete', @perchiste, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', perchistes_path %>

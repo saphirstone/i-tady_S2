@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Perchistes</h1>
+
+<% @perchistes.each do |perchiste| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= perchiste_path(perchiste.id) %>"><%= perchiste.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= perchiste.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= perchiste.email %></p>
+                            </div>
+                            <a href="<%= perchiste_path(perchiste.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+
+<br>
+
+<%= link_to 'New perchiste', new_perchiste_path %>

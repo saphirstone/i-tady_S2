@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Monteur Videos</h1>
+
+<% @monteur_videos.each do |monteur_video| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= monteur_video_path(monteur_video.id) %>"><%= monteur_video.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= monteur_video.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= monteur_video.email %></p>
+                            </div>
+                            <a href="<%= monteur_video_path(monteur_video.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+
+<br>
+
+<%= link_to 'New Monteur Video', new_monteur_video_path %>
