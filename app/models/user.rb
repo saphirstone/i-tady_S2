@@ -28,6 +28,8 @@ class User < ActiveRecord::Base
   has_many :scenaristes
   has_many :dirphots
   has_many :chef_electriciens
+  has_many :scriptes
+
 
 
 
