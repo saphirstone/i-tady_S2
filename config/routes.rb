@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  get 'team', to:'home#team'
   
   resources :chef_de_projet_webs
   resources :flash_designers
