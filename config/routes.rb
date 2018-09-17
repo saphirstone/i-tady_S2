@@ -11,9 +11,10 @@ Rails.application.routes.draw do
   resources :cadreurs
   resources :perchistes
   resources :devs
-  get 'show/listecat'
 
   get 'show/show'
+  get 'show/listecat'
+  get 'show/listejob'
 
   resources :show
   resources :acteurs
