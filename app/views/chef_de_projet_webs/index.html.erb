@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chef De Projet Webs</h1>
+
+<% @chef_de_projet_webs.each do |chef_de_projet_web| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= chef_de_projet_web_path(chef_de_projet_web.id) %>"><%= chef_de_projet_web.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= chef_de_projet_web.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= chef_de_projet_web.email %></p>
+                            </div>
+                            <a href="<%= chef_de_projet_web_path(chef_de_projet_web.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+<% end %> 
+
+<br>
+
+<%= link_to 'New Chef De Projet Web', new_chef_de_projet_web_path %>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   
+  resources :chef_de_projet_webs
   resources :flash_designers
   resources :web_masters
   resources :web_designers

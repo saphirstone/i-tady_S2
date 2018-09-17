@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prenom:</strong>
+  <%= @chef_de_projet_web.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @chef_de_projet_web.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @chef_de_projet_web.email %>
+</p>
+
+<p>
+  <strong>Info carriere:</strong>
+  <%= @chef_de_projet_web.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @chef_de_projet_web.ambition %>
+</p>
+
+
+
+
+
+<% if chef_de_projet_web_author(@chef_de_projet_web) %>
+  <%= link_to 'Edit', edit_chef_de_projet_web_path(@chef_de_projet_web) %> |
+  <%= link_to 'Delete', @chef_de_projet_web, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', chef_de_projet_webs_path %>
