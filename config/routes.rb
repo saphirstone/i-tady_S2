@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :photographes
+  resources :vfxes
+  resources :inge_sons
+  resources :directeur_de_prods
   resources :scriptes
   resources :chef_electriciens
   resources :dirphots

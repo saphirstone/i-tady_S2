@@ -24,7 +24,7 @@ class MonteurVideosController < ApplicationController
     @monteur_video = current_user.monteur_videos.build(monteur_video_params)
 
     if @monteur_video.save
-      redirect_to @monteur_video, notice: 'Monteur video was successfully created.'
+      redirect_to @monteur_video, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class MonteurVideosController < ApplicationController
   # PATCH/PUT /monteur_videos/1
   def update
     if @monteur_video.update(monteur_video_params)
-      redirect_to @monteur_video, notice: 'Monteur video was successfully updated.'
+      redirect_to @monteur_video, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class MonteurVideosController < ApplicationController
   # DELETE /monteur_videos/1
   def destroy
     @monteur_video.destroy
-    redirect_to monteur_videos_url, notice: 'Monteur video was successfully destroyed.'
+    redirect_to monteur_videos_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

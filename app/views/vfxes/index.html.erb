@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vfxes</h1>
+
+<% @vfxes.each do |vfx| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= vfx_path(vfx.id) %>"><%= vfx.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= vfx.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= vfx.email %></p>
+                            </div>
+                            <a href="<%= vfx_path(vfx.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %>
+
+<br>
+
+<%= link_to 'New Vfx', new_vfx_path %>

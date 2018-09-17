@@ -24,7 +24,7 @@ class RegiseursController < ApplicationController
     @regiseur = current_user.regiseurs.build(regiseur_params)
 
     if @regiseur.save
-      redirect_to @regiseur, notice: 'Regiseur was successfully created.'
+      redirect_to @regiseur, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class RegiseursController < ApplicationController
   # PATCH/PUT /regiseurs/1
   def update
     if @regiseur.update(regiseur_params)
-      redirect_to @regiseur, notice: 'Regiseur was successfully updated.'
+      redirect_to @regiseur, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class RegiseursController < ApplicationController
   # DELETE /regiseurs/1
   def destroy
     @regiseur.destroy
-    redirect_to regiseurs_url, notice: 'Regiseur was successfully destroyed.'
+    redirect_to regiseurs_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

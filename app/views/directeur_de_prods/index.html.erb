@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Directeur De Prods</h1>
+
+<% @directeur_de_prods.each do |directeur_de_prod| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= directeur_de_prod_path(directeur_de_prod.id) %>"><%= directeur_de_prod.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= directeur_de_prod.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= directeur_de_prod.email %></p>
+                            </div>
+                            <a href="<%= directeur_de_prod_path(directeur_de_prod.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+
+<br>
+
+<%= link_to 'New Directeur De Prod', new_directeur_de_prod_path %>

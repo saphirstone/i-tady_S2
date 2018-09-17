@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Photographes</h1>
+
+<% @photographes.each do |photographe| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= photographe_path(photographe.id) %>"><%= photographe.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= photographe.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= photographe.email %></p>
+                            </div>
+                            <a href="<%= photographe_path(photographe.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+
+<br>
+
+<%= link_to 'New Photographe', new_photographe_path %>

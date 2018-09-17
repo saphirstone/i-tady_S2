@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prénom:</strong>
+  <%= @photographe.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @photographe.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @photographe.email %>
+</p>
+
+<p>
+  <strong>Équipe:</strong>
+  <%= @photographe.equipe %>
+</p>
+
+<p>
+  <strong>Info carrière:</strong>
+  <%= @photographe.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @photographe.ambition %>
+</p>
+
+
+
+
+<% if photographe_author(@photographe) %>
+  <%= link_to 'Edit', edit_photographe_path(@photographe) %> |
+  <%= link_to 'Delete', @photographe, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', photographes_path %>

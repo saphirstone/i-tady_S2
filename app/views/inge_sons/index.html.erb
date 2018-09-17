@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ingénieur de Sons</h1>
+
+<% @inge_sons.each do |inge_son| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= inge_son_path(inge_son.id) %>"><%= inge_son.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= inge_son.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= inge_son.email %></p>
+                            </div>
+                            <a href="<%= inge_son_path(inge_son.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% end %> 
+
+<br>
+
+<%= link_to 'New Inge Son', new_inge_son_path %>

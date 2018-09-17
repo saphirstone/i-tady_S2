@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prénom:</strong>
+  <%= @inge_son.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @inge_son.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @inge_son.email %>
+</p>
+
+<p>
+  <strong>Info carrière:</strong>
+  <%= @inge_son.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @inge_son.ambition %>
+</p>
+
+
+
+
+
+<% if inge_son_author(@inge_son) %>
+  <%= link_to 'Edit', edit_inge_son_path(@inge_son) %> |
+  <%= link_to 'Delete', @inge_son, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', inge_sons_path %>

@@ -24,7 +24,7 @@ class ScenaristesController < ApplicationController
     @scenariste = current_user.scenaristes.build(scenariste_params)
 
     if @scenariste.save
-      redirect_to @scenariste, notice: 'Scenariste was successfully created.'
+      redirect_to @scenariste, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ScenaristesController < ApplicationController
   # PATCH/PUT /scenaristes/1
   def update
     if @scenariste.update(scenariste_params)
-      redirect_to @scenariste, notice: 'Scenariste was successfully updated.'
+      redirect_to @scenariste, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class ScenaristesController < ApplicationController
   # DELETE /scenaristes/1
   def destroy
     @scenariste.destroy
-    redirect_to scenaristes_url, notice: 'Scenariste was successfully destroyed.'
+    redirect_to scenaristes_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

@@ -24,7 +24,7 @@ class ActeursController < ApplicationController
     @acteur = current_user.acteurs.build(acteur_params)
 
     if @acteur.save
-      redirect_to @acteur, notice: 'Acteur was successfully created.'
+      redirect_to @acteur, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ActeursController < ApplicationController
   # PATCH/PUT /acteurs/1
   def update
     if @acteur.update(acteur_params)
-      redirect_to @acteur, notice: 'Acteur was successfully updated.'
+      redirect_to @acteur, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class ActeursController < ApplicationController
   # DELETE /acteurs/1
   def destroy
     @acteur.destroy
-    redirect_to acteurs_url, notice: 'Acteur was successfully destroyed.'
+    redirect_to acteurs_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

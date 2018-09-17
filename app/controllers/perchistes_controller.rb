@@ -24,7 +24,7 @@ class PerchistesController < ApplicationController
     @perchiste = current_user.perchistes.build(perchiste_params)
 
     if @perchiste.save
-      redirect_to @perchiste, notice: 'Perchiste was successfully created.'
+      redirect_to @perchiste, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class PerchistesController < ApplicationController
   # PATCH/PUT /perchistes/1
   def update
     if @perchiste.update(perchiste_params)
-      redirect_to @perchiste, notice: 'Perchiste was successfully updated.'
+      redirect_to @perchiste, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class PerchistesController < ApplicationController
   # DELETE /perchistes/1
   def destroy
     @perchiste.destroy
-    redirect_to perchistes_url, notice: 'Perchiste was successfully destroyed.'
+    redirect_to perchistes_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

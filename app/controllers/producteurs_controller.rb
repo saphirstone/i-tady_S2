@@ -24,7 +24,7 @@ class ProducteursController < ApplicationController
     @producteur = current_user.producteurs.build(producteur_params)
 
     if @producteur.save
-      redirect_to @producteur, notice: 'Producteur was successfully created.'
+      redirect_to @producteur, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ProducteursController < ApplicationController
   # PATCH/PUT /producteurs/1
   def update
     if @producteur.update(producteur_params)
-      redirect_to @producteur, notice: 'Producteur was successfully updated.'
+      redirect_to @producteur, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class ProducteursController < ApplicationController
   # DELETE /producteurs/1
   def destroy
     @producteur.destroy
-    redirect_to producteurs_url, notice: 'Producteur was successfully destroyed.'
+    redirect_to producteurs_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

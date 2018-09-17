@@ -24,7 +24,7 @@ class DirphotsController < ApplicationController
     @dirphot = current_user.dirphots.build(dirphot_params)
 
     if @dirphot.save
-      redirect_to @dirphot, notice: 'Dirphot was successfully created.'
+      redirect_to @dirphot, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class DirphotsController < ApplicationController
   # PATCH/PUT /dirphots/1
   def update
     if @dirphot.update(dirphot_params)
-      redirect_to @dirphot, notice: 'Dirphot was successfully updated.'
+      redirect_to @dirphot, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class DirphotsController < ApplicationController
   # DELETE /dirphots/1
   def destroy
     @dirphot.destroy
-    redirect_to dirphots_url, notice: 'Dirphot was successfully destroyed.'
+    redirect_to dirphots_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

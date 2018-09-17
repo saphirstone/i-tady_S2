@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180914125445) do
+ActiveRecord::Schema.define(version: 20180914135002) do
 
   create_table "acteurs", force: :cascade do |t|
     t.string   "nom_et_prenom"
@@ -121,6 +121,17 @@ ActiveRecord::Schema.define(version: 20180914125445) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "directeur_de_prods", force: :cascade do |t|
+    t.string   "nom_et_prenom"
+    t.string   "numero"
+    t.string   "email"
+    t.text     "info_carriere"
+    t.text     "ambition"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+  end
+
   create_table "dirphots", force: :cascade do |t|
     t.string   "nom_et_prenom"
     t.string   "numero"
@@ -169,6 +180,17 @@ ActiveRecord::Schema.define(version: 20180914125445) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "inge_sons", force: :cascade do |t|
+    t.string   "nom_et_prenom"
+    t.string   "numero"
+    t.string   "email"
+    t.text     "info_carriere"
+    t.text     "ambition"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
   end
 
   create_table "makeups", force: :cascade do |t|
@@ -233,6 +255,18 @@ ActiveRecord::Schema.define(version: 20180914125445) do
     t.string   "numero"
     t.string   "email"
     t.string   "equipement"
+    t.text     "info_carriere"
+    t.text     "ambition"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+  end
+
+  create_table "photographes", force: :cascade do |t|
+    t.string   "nom_et_prenom"
+    t.string   "numero"
+    t.string   "email"
+    t.string   "equipe"
     t.text     "info_carriere"
     t.text     "ambition"
     t.datetime "created_at",    null: false
@@ -336,6 +370,17 @@ ActiveRecord::Schema.define(version: 20180914125445) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["slug"], name: "index_users_on_slug", unique: true
+  end
+
+  create_table "vfxes", force: :cascade do |t|
+    t.string   "nom_et_prenom"
+    t.string   "numero"
+    t.string   "email"
+    t.text     "info_carriere"
+    t.text     "ambition"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
   end
 
   create_table "votes", force: :cascade do |t|

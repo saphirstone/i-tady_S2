@@ -24,7 +24,7 @@ class ScriptesController < ApplicationController
     @scripte = current_user.scriptes.build(scripte_params)
 
     if @scripte.save
-      redirect_to @scripte, notice: 'Scripte was successfully created.'
+      redirect_to @scripte, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ScriptesController < ApplicationController
   # PATCH/PUT /scriptes/1
   def update
     if @scripte.update(scripte_params)
-      redirect_to @scripte, notice: 'Scripte was successfully updated.'
+      redirect_to @scripte, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class ScriptesController < ApplicationController
   # DELETE /scriptes/1
   def destroy
     @scripte.destroy
-    redirect_to scriptes_url, notice: 'Scripte was successfully destroyed.'
+    redirect_to scriptes_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

@@ -29,6 +29,13 @@ class User < ActiveRecord::Base
   has_many :dirphots
   has_many :chef_electriciens
   has_many :scriptes
+  has_many :directeur_de_prods
+  has_many :inge_sons
+  has_many :vfxes
+  has_many :photographes
+  
+
+
 
 
 

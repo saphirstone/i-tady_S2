@@ -24,7 +24,7 @@ class ChefOperateursController < ApplicationController
     @chef_operateur = current_user.chef_operateurs.build(chef_operateur_params)
 
     if @chef_operateur.save
-      redirect_to @chef_operateur, notice: 'Chef operateur was successfully created.'
+      redirect_to @chef_operateur, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ChefOperateursController < ApplicationController
   # PATCH/PUT /chef_operateurs/1
   def update
     if @chef_operateur.update(chef_operateur_params)
-      redirect_to @chef_operateur, notice: 'Chef operateur was successfully updated.'
+      redirect_to @chef_operateur, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class ChefOperateursController < ApplicationController
   # DELETE /chef_operateurs/1
   def destroy
     @chef_operateur.destroy
-    redirect_to chef_operateurs_url, notice: 'Chef operateur was successfully destroyed.'
+    redirect_to chef_operateurs_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

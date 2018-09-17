@@ -24,7 +24,7 @@ class ChefElectriciensController < ApplicationController
     @chef_electricien = current_user.chef_electriciens.build(chef_electricien_params)
 
     if @chef_electricien.save
-      redirect_to @chef_electricien, notice: 'Chef electricien was successfully created.'
+      redirect_to @chef_electricien, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ChefElectriciensController < ApplicationController
   # PATCH/PUT /chef_electriciens/1
   def update
     if @chef_electricien.update(chef_electricien_params)
-      redirect_to @chef_electricien, notice: 'Chef electricien was successfully updated.'
+      redirect_to @chef_electricien, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class ChefElectriciensController < ApplicationController
   # DELETE /chef_electriciens/1
   def destroy
     @chef_electricien.destroy
-    redirect_to chef_electriciens_url, notice: 'Chef electricien was successfully destroyed.'
+    redirect_to chef_electriciens_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

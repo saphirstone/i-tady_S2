@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prénom:</strong>
+  <%= @directeur_de_prod.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @directeur_de_prod.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @directeur_de_prod.email %>
+</p>
+
+<p>
+  <strong>Info carrière:</strong>
+  <%= @directeur_de_prod.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @directeur_de_prod.ambition %>
+</p>
+
+
+
+
+
+<% if directeur_de_prod_author(@directeur_de_prod) %>
+  <%= link_to 'Edit', edit_directeur_de_prod_path(@directeur_de_prod) %> |
+  <%= link_to 'Delete', @directeur_de_prod, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', directeur_de_prods_path %>

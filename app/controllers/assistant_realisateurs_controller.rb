@@ -24,7 +24,7 @@ class AssistantRealisateursController < ApplicationController
     @assistant_realisateur = current_user.assistant_realisateurs.build(assistant_realisateur_params)
 
     if @assistant_realisateur.save
-      redirect_to @assistant_realisateur, notice: 'Assistant realisateur was successfully created.'
+      redirect_to @assistant_realisateur, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class AssistantRealisateursController < ApplicationController
   # PATCH/PUT /assistant_realisateurs/1
   def update
     if @assistant_realisateur.update(assistant_realisateur_params)
-      redirect_to @assistant_realisateur, notice: 'Assistant realisateur was successfully updated.'
+      redirect_to @assistant_realisateur, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class AssistantRealisateursController < ApplicationController
   # DELETE /assistant_realisateurs/1
   def destroy
     @assistant_realisateur.destroy
-    redirect_to assistant_realisateurs_url, notice: 'Assistant realisateur was successfully destroyed.'
+    redirect_to assistant_realisateurs_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

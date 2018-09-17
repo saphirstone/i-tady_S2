@@ -24,7 +24,7 @@ class ChefDecorateursController < ApplicationController
     @chef_decorateur = current_user.chef_decorateurs.build(chef_decorateur_params)
 
     if @chef_decorateur.save
-      redirect_to @chef_decorateur, notice: 'Chef decorateur was successfully created.'
+      redirect_to @chef_decorateur, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ChefDecorateursController < ApplicationController
   # PATCH/PUT /chef_decorateurs/1
   def update
     if @chef_decorateur.update(chef_decorateur_params)
-      redirect_to @chef_decorateur, notice: 'Chef decorateur was successfully updated.'
+      redirect_to @chef_decorateur, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class ChefDecorateursController < ApplicationController
   # DELETE /chef_decorateurs/1
   def destroy
     @chef_decorateur.destroy
-    redirect_to chef_decorateurs_url, notice: 'Chef decorateur was successfully destroyed.'
+    redirect_to chef_decorateurs_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

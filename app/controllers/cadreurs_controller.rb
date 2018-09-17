@@ -24,7 +24,7 @@ class CadreursController < ApplicationController
     @cadreur = current_user.cadreurs.build(cadreur_params)
 
     if @cadreur.save
-      redirect_to @cadreur, notice: 'Cadreur was successfully created.'
+      redirect_to @cadreur, notice: 'Votre postulation est faite!'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class CadreursController < ApplicationController
   # PATCH/PUT /cadreurs/1
   def update
     if @cadreur.update(cadreur_params)
-      redirect_to @cadreur, notice: 'Cadreur was successfully updated.'
+      redirect_to @cadreur, notice: 'Votre postulation a bien été modifié!'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class CadreursController < ApplicationController
   # DELETE /cadreurs/1
   def destroy
     @cadreur.destroy
-    redirect_to cadreurs_url, notice: 'Cadreur was successfully destroyed.'
+    redirect_to cadreurs_url, notice: 'Votre postulation a bien été retiré!'
   end
 
   private

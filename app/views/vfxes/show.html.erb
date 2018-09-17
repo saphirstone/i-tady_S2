@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prénom:</strong>
+  <%= @vfx.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @vfx.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @vfx.email %>
+</p>
+
+<p>
+  <strong>Info carrière:</strong>
+  <%= @vfx.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @vfx.ambition %>
+</p>
+
+
+
+
+<% if vfx_author(@vfx) %>
+  <%= link_to 'Edit', edit_vfx_path(@vfx) %> |
+  <%= link_to 'Delete', @vfx, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', vfxes_path %>
