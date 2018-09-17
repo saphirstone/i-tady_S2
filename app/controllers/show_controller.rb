@@ -4,5 +4,8 @@ class ShowController < ApplicationController
 
   def listejob
   end
+
+  def listedev
+  end
   
 end

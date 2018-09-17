@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'show/show'
   get 'show/listecat'
   get 'show/listejob'
+  get 'show/listedev'
+
 
   resources :show
   resources :acteurs
