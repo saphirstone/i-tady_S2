@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Web Masters</h1>
+
+<% @web_masters.each do |web_master| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= web_master_path(web_master.id) %>"><%= web_master.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= web_master.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= web_master.email %></p>
+                            </div>
+                            <a href="<%= web_master_path(web_master.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+<% end %> 
+
+<br>
+
+<%= link_to 'New Web Master', new_web_master_path %>

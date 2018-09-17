@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   
+  resources :flash_designers
+  resources :web_masters
   resources :web_designers
   resources :integrateur_webs
   resources :referenceur_webs

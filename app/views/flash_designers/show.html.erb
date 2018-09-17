@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prenom:</strong>
+  <%= @flash_designer.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @flash_designer.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @flash_designer.email %>
+</p>
+
+<p>
+  <strong>Info carriere:</strong>
+  <%= @flash_designer.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @flash_designer.ambition %>
+</p>
+
+
+
+
+
+
+<% if flash_designer_author(@flash_designer) %>
+  <%= link_to 'Edit', edit_flash_designer_path(@flash_designer) %> |
+  <%= link_to 'Delete', @flash_designer, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', flash_designers_path %>

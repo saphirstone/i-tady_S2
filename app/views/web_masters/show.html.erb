@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prenom:</strong>
+  <%= @web_master.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @web_master.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @web_master.email %>
+</p>
+
+<p>
+  <strong>Info carriere:</strong>
+  <%= @web_master.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @web_master.ambition %>
+</p>
+
+
+
+
+
+<% if web_master_author(@web_master) %>
+  <%= link_to 'Edit', edit_web_master_path(@web_master) %> |
+  <%= link_to 'Delete', @web_master, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', web_masters_path %>

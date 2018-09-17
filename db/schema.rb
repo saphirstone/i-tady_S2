@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180917100719) do
+ActiveRecord::Schema.define(version: 20180917103131) do
 
   create_table "acteurs", force: :cascade do |t|
     t.string   "nom_et_prenom"
@@ -168,6 +168,17 @@ ActiveRecord::Schema.define(version: 20180917100719) do
     t.index ["cached_votes_up"], name: "index_events_on_cached_votes_up"
     t.index ["comments_count"], name: "index_events_on_comments_count"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "flash_designers", force: :cascade do |t|
+    t.string   "nom_et_prenom"
+    t.string   "numero"
+    t.string   "email"
+    t.text     "info_carriere"
+    t.text     "ambition"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
   end
 
   create_table "follows", force: :cascade do |t|
@@ -432,6 +443,17 @@ ActiveRecord::Schema.define(version: 20180917100719) do
   end
 
   create_table "web_designers", force: :cascade do |t|
+    t.string   "nom_et_prenom"
+    t.string   "numero"
+    t.string   "email"
+    t.text     "info_carriere"
+    t.text     "ambition"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+  end
+
+  create_table "web_masters", force: :cascade do |t|
     t.string   "nom_et_prenom"
     t.string   "numero"
     t.string   "email"

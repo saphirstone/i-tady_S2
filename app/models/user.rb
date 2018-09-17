@@ -37,6 +37,9 @@ class User < ActiveRecord::Base
   has_many :referenceur_webs
   has_many :integrateur_webs
   has_many :web_designers
+  has_many :web_masters
+  has_many :flash_designers
+
 
 
 
