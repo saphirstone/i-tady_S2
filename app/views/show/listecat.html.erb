@@ -1,30 +1,105 @@
+
+
+<body>
 <div class="row">
+<head>
 
-
-
+</head> 
 
   <div class="col-lg-6 col-lg-offset-3 well">
 
-    <h1> Les postes dans la Cinématographie </h1>
+  <h1 class="text-center">Cinématographie</h1>
+    
+    <div class="real"><%= link_to 'Producteurs', producteurs_path %>
+      <i class="fa-angle-down" data-toggle="collapse" data-target="#collapseExample0" aria-expanded="false"></i>
 
+      <div class="collapse" id="collapseExample0">
+        <div class="well">
+      Le réalisateur est une sorte de chef d'orchestre. Il doit s'assurer que chaque équipe mène à bien son travail, en fonction du ton, de l'atmosphère du projet final qu'il a en tête. Pour cela, le réalisateur est partout. Avant le tournage : 
+              Il réalise   le découpage technique du scénario en différents plans, avec un story-board. 
+              Il traite avec les producteurs et l'équipe casting. 
+              Il effectue des repérages pour déterminer les lieux de tournage.
 
-    <p> <%= link_to 'Acteurs', acteurs_path %></p> 
-    <p> <%= link_to 'Assistant réalisateurs', assistant_realisateurs_path %></p>
-    <p> <%= link_to 'Cadreurs', cadreurs_path %></p>    
-    <p> <%= link_to 'Chef décorateurs', chef_decorateurs_path %></p>    
-    <p> <%= link_to 'Chef éléctriciens', chef_electriciens_path %></p>    
-    <p> <%= link_to 'Chef opérateur', chef_operateurs_path %></p>    
-    <p> <%= link_to 'Directeur photographiques', dirphots_path %></p>  
-    <p> <%= link_to 'Directeur de productions', directeur_de_prods_path %></p>   
-    <p> <%= link_to 'Effets spéciaux', vfxes_path %></p>    
-    <p> <%= link_to 'Ingénieur de son', inge_sons_path %></p> 
-    <p> <%= link_to 'Maquilleurs', makeups_path %></p>    
-    <p> <%= link_to 'Monteur vidéo', monteur_videos_path %></p> 
-    <p> <%= link_to 'Perchsites', perchistes_path %></p>    
-    <p> <%= link_to 'Photographes', photographes_path %></p>    
-    <p> <%= link_to 'Producteurs', producteurs_path %></p> 
-    <p> <%= link_to 'Régiseurs', regiseurs_path %></p>
-    <p> <%= link_to 'Scénaristes', scenaristes_path %></p>    
-    <p> <%= link_to 'Scriptes', scriptes_path %></p>    
     </div>
+      </div>
+        </div>
+   
+   
+
+   
+       <div class="reg"><%= link_to 'Régiseurs', regiseurs_path %>
+         <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false"></i>
+
+         <div class="collapse" id="collapseExample1">
+           <div class="well">
+      Le régisseur général conçoit et supervise la mise en œuvre des dispositifs techniques nécessaires à la conduite d’un spectacle, d’un tournage ou de tout autre évènement culturel. Il coordonne les solutions techniques en réponse aux exigences de sécurité, aux demandes des artistes et aux fiches techniques des lieux.
+    
+      </div>
+        </div>
+          </div>
+   
+
+
+
+       <div class="ass"> <%= link_to 'Assistant réalisateurs', assistant_realisateurs_path %>
+           <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false"></i>
+
+            <div class="collapse" id="collapseExample2">
+              <div class="well">
+    Le 1er assistant réalisateur est l’un des cadres de production d’un film. Il est en charge de l’ensemble de la planification d’un projet de tournage. Il établit en particulier le plan de travail du projet. Il travaille sur la base d’un scénario (et ses versions successives). Son rôle est essentiel à la création d’une œuvre filmée, pendant les phases de préparation et maturation d’un projet, et pendant le tournage. L’ensemble des données qu’il fournit au producteur et au réalisateur durant la phase de préparation permet à ceux-ci de valider un projet. Il est le premier collaborateur du réalisateur notamment à chaque instant du tournage et est l’interlocuteur privilégié des différents techniciens.
+          </div>
+                </div>
+                  </div>
+
+
+
+    <div class="chef"> <%= link_to 'Chef operateurs', chef_operateurs_path %>
+      <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false"></i>
+
+            <div class="collapse" id="collapseExample3">
+              <div class="well">
+   En tant que chef du service de l'image, le chef opérateur est amené à  travailler en étroite collaboration avec le réalisateur. Ainsi, il est le garant du bon déroulement du tournage et de sa qualité. Il a pour objectif de régler tous les détails concernant le tournage avec que le signal « silence à§a tourne!» ne soit prononcé
+       </div>
+                </div>
+                  </div>
+
+
+ <div class="chf"><%= link_to 'Chef décorateurs', chef_operateurs_path %>
+ <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false"></i>
+
+            <div class="collapse" id="collapseExample4">
+              <div class="well">
+
+  Le chef décorateur est le créateur des décors d’un film, d’une fiction ou d’une pub. Il définit leur ligne artistique, il budgète et planifie leur fabrication, il organise leur installation et leur dépose.
+             </div>
+                </div>
+                  </div>
+
+
+  <div class="per"><%= link_to 'Perchman', perchmen_path %>
+     <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false"></i>
+
+            <div class="collapse" id="collapseExample5">
+              <div class="well">
+
+    Sur le plateau, le perchman promène son micro muni d’une perche au dessus de leur tête pendant toute la durée des dialogues, en veillant à ne pas faire d’ombre avec sa perche. Inutile de préciser que ce qui constitue sa principale mission exige une bonne résistance physique, surtout s’il travaille à l’extérieur !
+     </div>
+              </div>
+                </div>
+
+
+
+
+    
+    <div class="maq"><%= link_to 'Maquilleurs', makeups_path %>
+    <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false"></i>
+
+            <div class="collapse" id="collapseExample7">
+              <div class="well">
+    Le chef maquilleur est en charge du maquillage visage et corps, ainsi que de la pose de postiches sur le visage (moustache, barbe, favoris), pour les comédiens participant au tournage d’un film ou d’un téléfilm. Le tournage peut nécessiter l’emploi de plusieurs maquilleurs, chacun travaillant pour un ou plusieurs comédiens. L’équipe maquillage d’un tournage est généralement composée d’un chef maquilleur et de maquilleurs. Il veille dans l’exercice de ses fonctions au respect des règles d’hygiène et de sécurité.
+   </div>
+              </div>
+                </div>
+ 
+</div>
 </div>
