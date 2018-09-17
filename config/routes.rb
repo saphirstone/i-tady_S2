@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   
+  resources :web_designers
   resources :integrateur_webs
   resources :referenceur_webs
   resources :dev_mobiles

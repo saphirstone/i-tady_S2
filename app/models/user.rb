@@ -36,6 +36,8 @@ class User < ActiveRecord::Base
   has_many :dev_mobiles
   has_many :referenceur_webs
   has_many :integrateur_webs
+  has_many :web_designers
+
 
 
   
