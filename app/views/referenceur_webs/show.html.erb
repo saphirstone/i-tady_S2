@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prenom:</strong>
+  <%= @referenceur_web.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @referenceur_web.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @referenceur_web.email %>
+</p>
+
+<p>
+  <strong>Info carriere:</strong>
+  <%= @referenceur_web.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @referenceur_web.ambition %>
+</p>
+
+
+
+
+
+<% if referenceur_web_author(@referenceur_web) %>
+  <%= link_to 'Edit', edit_referenceur_web_path(@referenceur_web) %> |
+  <%= link_to 'Delete', @referenceur_web, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', referenceur_webs_path %>

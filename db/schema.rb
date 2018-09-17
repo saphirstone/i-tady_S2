@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180914135002) do
+ActiveRecord::Schema.define(version: 20180917090734) do
 
   create_table "acteurs", force: :cascade do |t|
     t.string   "nom_et_prenom"
@@ -121,6 +121,18 @@ ActiveRecord::Schema.define(version: 20180914135002) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "dev_mobiles", force: :cascade do |t|
+    t.string   "nom_et_prenom"
+    t.string   "numero"
+    t.string   "email"
+    t.string   "langage"
+    t.text     "info_carriere"
+    t.text     "ambition"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+  end
+
   create_table "directeur_de_prods", force: :cascade do |t|
     t.string   "nom_et_prenom"
     t.string   "numero"
@@ -183,6 +195,17 @@ ActiveRecord::Schema.define(version: 20180914135002) do
   end
 
   create_table "inge_sons", force: :cascade do |t|
+    t.string   "nom_et_prenom"
+    t.string   "numero"
+    t.string   "email"
+    t.text     "info_carriere"
+    t.text     "ambition"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+  end
+
+  create_table "integrateur_webs", force: :cascade do |t|
     t.string   "nom_et_prenom"
     t.string   "numero"
     t.string   "email"
@@ -290,6 +313,17 @@ ActiveRecord::Schema.define(version: 20180914135002) do
 
   create_table "producteurs", force: :cascade do |t|
     t.string   "nom_et_prenom"
+    t.string   "email"
+    t.text     "info_carriere"
+    t.text     "ambition"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+  end
+
+  create_table "referenceur_webs", force: :cascade do |t|
+    t.string   "nom_et_prenom"
+    t.string   "numero"
     t.string   "email"
     t.text     "info_carriere"
     t.text     "ambition"

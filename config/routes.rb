@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  
+  resources :integrateur_webs
+  resources :referenceur_webs
+  resources :dev_mobiles
   resources :photographes
   resources :vfxes
   resources :inge_sons

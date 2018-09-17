@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom et prenom:</strong>
+  <%= @integrateur_web.nom_et_prenom %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @integrateur_web.numero %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @integrateur_web.email %>
+</p>
+
+<p>
+  <strong>Info carriere:</strong>
+  <%= @integrateur_web.info_carriere %>
+</p>
+
+<p>
+  <strong>Ambition:</strong>
+  <%= @integrateur_web.ambition %>
+</p>
+
+
+
+
+
+
+<% if integrateur_web_author(@integrateur_web) %>
+  <%= link_to 'Edit', edit_integrateur_web_path(@integrateur_web) %> |
+  <%= link_to 'Delete', @integrateur_web, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
+<% end %>
+<%= link_to 'Back', integrateur_webs_path %>

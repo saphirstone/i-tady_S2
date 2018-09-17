@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dev Mobiles</h1>
+
+<% @dev_mobiles.each do |dev_mobile| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= dev_mobile_path(dev_mobile.id) %>"><%= dev_mobile.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= dev_mobile.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= dev_mobile.email %></p>
+                            </div>
+                            <a href="<%= dev_mobile_path(dev_mobile.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+<% end %> 
+
+<br>
+
+<%= link_to 'New Dev Mobile', new_dev_mobile_path %>

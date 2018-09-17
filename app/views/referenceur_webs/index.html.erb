@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Referenceur Webs</h1>
+
+<% @referenceur_webs.each do |referenceur_web| %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Package -->
+                    <div class="single-package">
+                        
+                        <div class="trip-details">
+                            <div class="left">
+                                <h4>
+                                    <a href="<%= referenceur_web_path(referenceur_web.id) %>"><%= referenceur_web.nom_et_prenom %></a>
+                                </h4>
+                                <p><%= referenceur_web.numero %></p>
+                            </div>
+                            <div class="right">
+                               
+                                    <p><%= referenceur_web.email %></p>
+                            </div>
+                            <a href="<%= referenceur_web_path(referenceur_web.id) %>" class="btn primary">Plus de détail</a>
+                        </div>
+                    </div>
+                    
+                </div>
+<% end %> 
+
+<br>
+
+<%= link_to 'New Referenceur Web', new_referenceur_web_path %>

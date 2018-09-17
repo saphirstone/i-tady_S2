@@ -33,6 +33,11 @@ class User < ActiveRecord::Base
   has_many :inge_sons
   has_many :vfxes
   has_many :photographes
+  has_many :dev_mobiles
+  has_many :referenceur_webs
+  has_many :integrateur_webs
+
+
   
 
 
