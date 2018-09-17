@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+
+
+<h2>
+  <%= link_to('Voir le profil', user_path(@dev_mobile.user_id)) %>
+</h2>
 <p>
   <strong>Nom et prenom:</strong>
   <%= @dev_mobile.nom_et_prenom %>

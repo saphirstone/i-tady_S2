@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+
+
+
+
+
+<h2>
+  <%= link_to('Voir le profil', user_path(@monteur_video.user_id)) %>
+</h2>
 <p>
   <strong>Nom et prénom:</strong>
   <%= @monteur_video.nom_et_prenom %>
