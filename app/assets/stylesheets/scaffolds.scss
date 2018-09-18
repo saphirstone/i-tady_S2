@@ -21,14 +21,14 @@ pre {
 }
 
 a {
-  color: rgb(43, 42, 42);
+  color: rgb(79, 130, 153);
 
   &:visited {
-    color: #666;
+    color: rgb(79, 130, 153);
   }
 
   &:hover {
-    color: rgb(9, 113, 211);
+    color: rgb(0, 128, 197);
     // background-color: #000;
   }
 }
@@ -87,3 +87,23 @@ div {
 label {
   display: block;
 }
+
+
+
+div.buttn{
+  background-color: #bbbaba; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: fixed;
+    top: 100px; right: 40px;}
+div.buttn:hover {background-color: #e7e7e7;}

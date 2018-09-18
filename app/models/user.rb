@@ -40,6 +40,8 @@ class User < ActiveRecord::Base
   has_many :web_masters
   has_many :flash_designers
   has_many :chef_de_projet_webs
+  has_many :realisateurs
+
 
 
 

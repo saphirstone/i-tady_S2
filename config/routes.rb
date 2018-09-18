@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :realisateurs
   get 'team', to:'home#team'
   
   resources :chef_de_projet_webs
