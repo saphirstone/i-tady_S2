@@ -1,347 +1,461 @@
+<head>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.cards {
+display: grid;
+grid-gap: 1rem;
+grid-template-column­s: repeat(auto-fit, minmax(0px, 1fr));
+padding: 1rem;
+}
+
+.card {
+border: 1px solid #ccc;
+box-shadow: 3px 3px 3px #rgba(73, 98, 104,0.1);
+padding: 2rem 1rem;
+
+}
+
+</style>
+<link href="//­netdna.bootstrapcdn.c­om/bootstrap/3.2.0/­css/­bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> <script src="//­netdna.bootstrapcdn.c­om/bootstrap/3.2.0/­js/­bootstrap.min.js"></­script>
+<link rel="stylesheet" href="https://­maxcdn.bootstrapcdn.c­om/font-awesome/­4.7.0/css/­font-awesome.min.css">
+<script src="https://­code.jquery.com/­jquery-3.3.1.js"></script>
+</head>
 <body>
   <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
+    
 
       <h1 class="text-center">Cinématographie</h1>
 
+<br>
+<br>
+<br>
 
+<div class="row">
 
-      <div class="act">
-        <%= link_to 'Acteurs', acteurs_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample15" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample15">
-          <div class="well">
-            L'acteur est un artiste professionnel.
-            Sa mission principale est d'incarner un rôle sur scène ou à l'écran pour un film, une pièce ou une
-            publicité. Il doit être capable de jouer différents types de personnages de manière à convaincre le public
-            de leur réalité. Il peut être amené à assurer la promotion de sa pièce ou de son film auprès des médias
-            nationaux ou locaux. Certains peuvent être spécialisés dans le doublage. Ils prêtent alors leur voix à des
-            personnages d'animation ou à des comédiens étrangers.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="ass">
-        <%= link_to 'Assistant réalisateurs', assistant_realisateurs_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample2">
-          <div class="well">
-            Le 1er assistant réalisateur est l’un des cadres de production d’un film. Il est en charge de l’ensemble de
-            la planification d’un projet de tournage. Il établit en particulier le plan de travail du projet. Il
-            travaille sur la base d’un scénario (et ses versions successives). Son rôle est essentiel à la création
-            d’une
-            œuvre filmée, pendant les phases de préparation et maturation d’un projet, et pendant le tournage.
-            L’ensemble
-            des données qu’il fournit au producteur et au réalisateur durant la phase de préparation permet à ceux-ci
-            de
-            valider un projet. Il est le premier collaborateur du réalisateur notamment à chaque instant du tournage et
-            est l’interlocuteur privilégié des différents techniciens.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="cad">
-        <%= link_to 'Cadreurs', cadreurs_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample18" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample18">
-          <div class="well">
-            Le cadreur est un professionnel créatif et inspiré : son rôle ne se limite pas à l'application, il doit
-            réellement exploiter sa maîtrise technique au profit de l'harmonie des plans lors du tournage. Il seconde
-            ainsi le réalisateur, qu'il conseille et guide dans la mesure du possible. Par ailleurs, la profession
-            exige un travail sur la qualité d'image et la pertinence des angles qui demandent une patience à toute
-            épreuve, ainsi qu'une minutie infinie. Il doit respecter à la lettre les indications formulées par le
-            réalisateur et être organisé en conséquence.
-
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="chf">
-        <%= link_to 'Chef décorateurs', chef_operateurs_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample4">
-          <div class="well">
-
-            Le chef décorateur est le créateur des décors d’un film, d’une fiction ou d’une pub. Il définit leur ligne
-            artistique, il budgète et planifie leur fabrication, il organise leur installation et leur dépose.
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="chfele">
-        <%= link_to 'Chef éléctriciens', chef_electriciens_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample11" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample11">
-          <div class="well">
-            Le chef électricien est le responsable technique de la lumière, il est l'interlocuteur du chef opérateur.
-            Avec l'aide de son équipe d'électriciens (les "électros"), dont il coordonne et organise le travail, il
-            réalise sur le plan technique et formel la lumière conçue par le chef opérateur.
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="chef">
-        <%= link_to 'Chef operateurs', chef_operateurs_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample3">
-          <div class="well">
-            En tant que chef du service de l'image, le chef opérateur est amené à travailler en étroite collaboration
-            avec le réalisateur. Ainsi, il est le garant du bon déroulement du tournage et de sa qualité. Il a pour
-            objectif de régler tous les détails concernant le tournage avec que le signal « silence à§a tourne!» ne
-            soit
-            prononcé
-          </div>
-        </div>
-      </div>
-
-
-      <div class="dir">
-        <%= link_to 'Directeur photographiques', dirphots_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample16" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample16">
-          <div class="well">
-            Le directeur de la photographie est responsable de la mise en lumière et en image d’un film (cinéma,
-            télévision, …). Il contribue à la création des aspects esthétiques d’un film, son rendu d’image et à la
-            mise en valeur du sujet et des comédiens. Il conçoit la mise en images sur la base du scénario et en
-            échange avec le réalisateur. Lors du tournage, son travail reste concentré sur la mise en lumière des plans
-            à tourner. A l’issue du tournage, le directeur de la photo suit l’étalonnage du film et peut intervient sur
-            les travaux de finition.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="dirp">
-        <%= link_to 'Directeur de productions', directeur_de_prods_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample17" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample17">
-          <div class="well">
-            Le directeur de production met en place l'organisation et pilote la production dans le respect des
-            contraintes de coûts, qualité, délais. Il définit la stratégie de fabrication des gammes de produits et
-            veille à la performance globale de la production.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="effet">
-        <%= link_to 'Effets spéciaux', vfxes_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample14" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample14">
-          <div class="well">
-            En fonction des intentions artistiques du metteur en scène, du réalisateur ou du chorégraphe qui fait appel
-            à ses services, il élabore des moyens techniques (mécanique, électrique, chimique, électronique, etc.) pour
-            créer l’illusion recherchée, en fonction du budget défini.
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="inge">
-        <%= link_to 'Ingénieur de son', inge_sons_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample12" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample12">
-          <div class="well">
-            L'appellation "ingénieur du son" recouvre plusieurs niveaux de responsabilités professionnelles. Tous les
-            professionnels qui touchent à la console gérant le son peuvent en effet s'appeler ingénieur du son.
-
-            Technicien, assistant, opérateur, chef opérateur..., tous n'ont pas le même niveau de qualification ni de
-            responsabilité en régie ou en studio.
-
-            Au cinéma, l’ingénieur du son peut être chargé de la prise de son pendant le tournage, du montage ou du
-            mixage.
-
-            Pour l’ingé son en studio, à la radio ou à la télévision, le son est, en quelque sorte, la matière
-            première, paroles et musiques.
-
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="maq">
-        <%= link_to 'Maquilleurs', makeups_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample7">
-          <div class="well">
-            Le chef maquilleur est en charge du maquillage visage et corps, ainsi que de la pose de postiches sur le
-            visage (moustache, barbe, favoris), pour les comédiens participant au tournage d’un film ou d’un téléfilm.
-            Le
-            tournage peut nécessiter l’emploi de plusieurs maquilleurs, chacun travaillant pour un ou plusieurs
-            comédiens. L’équipe maquillage d’un tournage est généralement composée d’un chef maquilleur et de
-            maquilleurs. Il veille dans l’exercice de ses fonctions au respect des règles d’hygiène et de sécurité.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="mon">
-        <%= link_to 'Monteur vidéo', monteur_videos_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample19" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample19">
-          <div class="well">
-            Effectue le montage des images et des sons de films, de reportages, d'émissions, ... à partir des rushes de
-            tournages, d'éléments d'archives, selon les intentions artistiques définies préalablement.
-            Peut élaborer des trucages vidéo.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="perch">
-        <%= link_to 'Perchistes', perchistes_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample8" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample8">
-          <div class="well">
-
-            Sur le plateau, le perchman promène son micro muni d’une perche au dessus de leur tête pendant toute la
-            durée
-            des dialogues, en veillant à ne pas faire d’ombre avec sa perche. Inutile de préciser que ce qui constitue
-            sa
-            principale mission exige une bonne résistance physique, surtout s’il travaille à l’extérieur !
-          </div>
-        </div>
-      </div>
-
-
-      <div class="pho">
-        <%= link_to 'Photographes', photographes_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample13" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample13">
-          <div class="well">
-            Le photographe est un professionnel de l'image. Il est capable de réaliser des prises de vue dans les
-            domaines de la mode, du mariage, de l'actualité, du paysage... Il est avant tout un créatif. Toutefois, il
-            peut consacrer une grande partie de son activité à la commercialisation de ses photos et au démarchage de
-            nouveaux clients..
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="prod">
-        <%= link_to 'Producteurs', producteurs_path %>
-        <i class="fa-angle-down" data-toggle="collapse" data-target="#collapseExample0" aria-expanded="false"></i>
-
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"> <%= link_to 'Acteurs', acteurs_path %>
+         <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample0" aria-expanded="false">
         <div class="collapse" id="collapseExample0">
-          <div class="well">
-            Le producteur travaille avec l'ensemble des collaborateurs qui interviennent sur le tournage d'un film ou
-            d'une émission. Il intervient tout au long de la vie d'un projet, c'est-à-dire de la réalisation du
-            scénario à sa distribution en salles.
+            <div class="well">
+              L'acteur est un artiste professionnel.
+              Sa mission principale est d'incarner un rôle sur scène ou à l'écran pour un film, une pièce ou une
+              publicité. Il doit être capable de jouer différents types de personnages de manière à convaincre le public
+              de leur réalité. Il peut être amené à assurer la promotion de sa pièce ou de son film auprès des médias
+              nationaux ou locaux. Certains peuvent être spécialisés dans le doublage. Ils prêtent alors leur voix à des
+              personnages d'animation ou à des comédiens étrangers.
+            </div>
           </div>
-        </div>
       </div>
-
-
-      <div class="reg">
-        <%= link_to 'Réalisateurs', realisateurs_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample1">
-          <div class="well">
-            Le réalisateur est une sorte de chef d'orchestre. Il doit s'assurer que chaque équipe mène à bien son
-            travail, en fonction du ton, de l'atmosphère du projet final qu'il a en tête. Pour cela, le réalisateur est
-            partout. Avant le tournage :
-            • Il réalise le découpage technique du scénario en différents plans, avec un story-board.
-            • Il traite avec les producteurs et l'équipe casting.
-            • Il effectue des repérages pour déterminer les lieux de tournage.
-            Pendant la période de tournage :
-            • Il dirige les acteurs, leur indique comment jouer.
-            • Il place les cameramen et leur donne des consignes.
-            • Il s'accorde avec le décorateur.
-            • Il travaille avec les différents membres de l'équipe technique (l'ingénieur son, le chef opérateur, le
-            directeur de la photographie...).
-            • Dans le cas, un peu différent, du réalisateur d'une émission de télévision, il dirige, non pas les
-            acteurs, mais l'ensemble des caméras réparties sur le plateau, indiquant où, quand, et comment filmer.
-            Les tâches étant très diversifiées, il est aidé d'un ou plusieurs assistants-réalisateurs. Une fois le
-            tournage achevé, son travail ne s'arrête pas là :
-            • Il supervise le mixage, c'est-à-dire l'intégration de la bande-son au film.
-            • Il reste en contact avec le chef monteur, avec qui il discute des choix artistiques.
-            • Il participe à la promotion du film en répondant à des interviews, et se rend sur les festivals.
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="reg">
-        <%= link_to 'Régiseurs', regiseurs_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample1">
-          <div class="well">
-            Le régisseur général conçoit et supervise la mise en œuvre des dispositifs techniques nécessaires à la
-            conduite d’un spectacle, d’un tournage ou de tout autre évènement culturel. Il coordonne les solutions
-            techniques en réponse aux exigences de sécurité, aux demandes des artistes et aux fiches techniques des
-            lieux.
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="scen">
-        <%= link_to 'Scénaristes', scenaristes_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample20" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample20">
-          <div class="well">
-            Le travail de scénariste varie beaucoup en fonction du support pour lequel il écrit :
-            • Pour le cinéma : c'est le travail de scénariste tel qu'on l'imagine. Avant que le scénario ne soit écrit
-            à proprement parler, les producteurs, le réalisateur et le scénariste se mettent d'accord sur un synopsis.
-            Puis le scénariste écrit les dialogues, en respectant un découpage des scènes et des indications scéniques
-            précises avec un vocabulaire spécifique. Le jeu d'acteur, le travail de photographie et de réalisation
-            jouent un rôle très important dans le résultat final. Une histoire tournée en plein air dans le désert par
-            exemple n'aura pas la même résonance que si elle se fait en huis clos, dans un appartement de ville. Le
-            plus souvent, le scénario prend en compte le contexte du film dès le départ. Il est même parfois écrit pour
-            un acteur en particulier.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="scrpt">
-        <%= link_to 'Scriptes', scriptes_path %>
-        <i class="fas fa-angle-down" data-toggle="collapse" data-target="#collapseExample10" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample10">
-          <div class="well">
-            Le scripte a pour mission de veiller à la continuité et à la cohérence visuelle et sonore d’un film pendant
-            la phase où le scénario se transforme en objet visuel par l’intermédiaire du tournage. Avant, pendant et
-            après le tournage, il travaille en étroite collaboration avec le réalisateur et prend complètement en
-            charge,
-            en tenant compte des exigences artistiques de celui-ci, l’ensemble des détails incontournables pour que
-            tous
-            les plans du film soient « raccords » et « montables ».
-          </div>
-        </div>
-      </div>
-
-
+      </h4>
     </div>
   </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Assistant réalisateurs', assistant_realisateurs_path %>
+        <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false">
+        <div class="collapse" id="collapseExample1">
+            <div class="well">
+        Le 1er assistant réalisateur est l’un des cadres de production d’un film. Il est en charge de l’ensemble de
+              la planification d’un projet de tournage. Il établit en particulier le plan de travail du projet. Il
+              travaille sur la base d’un scénario (et ses versions successives). Son rôle est essentiel à la création
+              d’une
+              œuvre filmée, pendant les phases de préparation et maturation d’un projet, et pendant le tournage.
+              L’ensemble
+              des données qu’il fournit au producteur et au réalisateur durant la phase de préparation permet à ceux-ci
+              de
+              valider un projet. Il est le premier collaborateur du réalisateur notamment à chaque instant du tournage et
+              est l’interlocuteur privilégié des différents techniciens.
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br>
+
+    <div class="col-sm-6">
+        <div class="card well">
+          <div class="card-body">
+            <h4 class="text-center"> <%= link_to 'Cadreurs', cadreurs_path %>
+           <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false">
+              <div class="collapse" id="collapseExample2">
+                <div class="well">
+                  Le cadreur est un professionnel créatif et inspiré : son rôle ne se limite pas à l'application, il doit
+              réellement exploiter sa maîtrise technique au profit de l'harmonie des plans lors du tournage. Il seconde
+              ainsi le réalisateur, qu'il conseille et guide dans la mesure du possible. Par ailleurs, la profession
+              exige un travail sur la qualité d'image et la pertinence des angles qui demandent une patience à toute
+              épreuve, ainsi qu'une minutie infinie. Il doit respecter à la lettre les indications formulées par le
+              réalisateur et être organisé en conséquence
+                </div>
+              </div>
+          </div>
+          </h4>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="card well">
+          <div class="card-body">
+            <h4 class="text-center"><%= link_to 'Chef décorateurs', chef_operateurs_path %>
+            <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false">
+            <div class="collapse" id="collapseExample3">
+                <div class="well">
+               Le chef décorateur est le créateur des décors d’un film, d’une fiction ou d’une pub. Il définit leur ligne
+              artistique, il budgète et planifie leur fabrication, il organise leur installation et leur dépose.
+          </div>
+        </div>
+      </div>
+      </h4>
+    </div>
+    </div>
+  <br>
+
+<div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"> <%= link_to 'Chef éléctriciens', chef_electriciens_path %>
+         <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false">
+        <div class="collapse" id="collapseExample4">
+            <div class="well">
+             Le chef électricien est le responsable technique de la lumière, il est l'interlocuteur du chef opérateur.
+              Avec l'aide de son équipe d'électriciens (les "électros"), dont il coordonne et organise le travail, il
+              réalise sur le plan technique et formel la lumière conçue par le chef opérateur.
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"> <%= link_to 'Chef operateurs', chef_operateurs_path %>
+        <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false">
+        <div class="collapse" id="collapseExample5">
+            <div class="well">
+         En tant que chef du service de l'image, le chef opérateur est amené à travailler en étroite collaboration
+              avec le réalisateur. Ainsi, il est le garant du bon déroulement du tournage et de sa qualité. Il a pour
+              objectif de régler tous les détails concernant le tournage avec que le signal « silence à§a tourne!» ne
+              soit
+              prononcé
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br>
+
+<div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center">  <%= link_to 'Directeur photographiques', dirphots_path %>
+         <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false">
+        <div class="collapse" id="collapseExample6">
+            <div class="well">
+              Le directeur de la photographie est responsable de la mise en lumière et en image d’un film (cinéma,
+              télévision, …). Il contribue à la création des aspects esthétiques d’un film, son rendu d’image et à la
+              mise en valeur du sujet et des comédiens. Il conçoit la mise en images sur la base du scénario et en
+              échange avec le réalisateur. Lors du tournage, son travail reste concentré sur la mise en lumière des plans
+              à tourner. A l’issue du tournage, le directeur de la photo suit l’étalonnage du film et peut intervient sur
+              les travaux de finition.
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Directeur de productions', directeur_de_prods_path %>
+        <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false">
+        <div class="collapse" id="collapseExample7">
+            <div class="well">
+       Le directeur de production met en place l'organisation et pilote la production dans le respect des
+              contraintes de coûts, qualité, délais. Il définit la stratégie de fabrication des gammes de produits et
+              veille à la performance globale de la production.
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br>
+<div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center">  <%= link_to 'Directeur photographiques', dirphots_path %>
+         <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false">
+        <div class="collapse" id="collapseExample6">
+            <div class="well">
+              Le directeur de la photographie est responsable de la mise en lumière et en image d’un film (cinéma,
+              télévision, …). Il contribue à la création des aspects esthétiques d’un film, son rendu d’image et à la
+              mise en valeur du sujet et des comédiens. Il conçoit la mise en images sur la base du scénario et en
+              échange avec le réalisateur. Lors du tournage, son travail reste concentré sur la mise en lumière des plans
+              à tourner. A l’issue du tournage, le directeur de la photo suit l’étalonnage du film et peut intervient sur
+              les travaux de finition.
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Directeur de productions', directeur_de_prods_path %>
+        <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false">
+        <div class="collapse" id="collapseExample7">
+            <div class="well">
+       Le directeur de production met en place l'organisation et pilote la production dans le respect des
+              contraintes de coûts, qualité, délais. Il définit la stratégie de fabrication des gammes de produits et
+              veille à la performance globale de la production.
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br>
+<div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"> <%= link_to 'Effets spéciaux', vfxes_path %>
+         <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample8" aria-expanded="false">
+        <div class="collapse" id="collapseExample8">
+            <div class="well">
+               En fonction des intentions artistiques du metteur en scène, du réalisateur ou du chorégraphe qui fait appel
+              à ses services, il élabore des moyens techniques (mécanique, électrique, chimique, électronique, etc.) pour
+              créer l’illusion recherchée, en fonction du budget défini.
+
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"> <%= link_to 'Ingénieur de son', inge_sons_path %>
+        <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample9" aria-expanded="false">
+        <div class="collapse" id="collapseExample9">
+            <div class="well">
+      L'appellation "ingénieur du son" recouvre plusieurs niveaux de responsabilités professionnelles. Tous les
+              professionnels qui touchent à la console gérant le son peuvent en effet s'appeler ingénieur du son.
+
+              Technicien, assistant, opérateur, chef opérateur..., tous n'ont pas le même niveau de qualification ni de
+              responsabilité en régie ou en studio.
+
+              Au cinéma, l’ingénieur du son peut être chargé de la prise de son pendant le tournage, du montage ou du
+              mixage.
+
+              Pour l’ingé son en studio, à la radio ou à la télévision, le son est, en quelque sorte, la matière
+              première, paroles et musiques.
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br> 
+ <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"> <%= link_to 'Maquilleurs', makeups_path %>
+         <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample10" aria-expanded="false">
+        <div class="collapse" id="collapseExample10">
+            <div class="well">
+               e chef maquilleur est en charge du maquillage visage et corps, ainsi que de la pose de postiches sur le
+              visage (moustache, barbe, favoris), pour les comédiens participant au tournage d’un film ou d’un téléfilm.
+              Le
+              tournage peut nécessiter l’emploi de plusieurs maquilleurs, chacun travaillant pour un ou plusieurs
+              comédiens. L’équipe maquillage d’un tournage est généralement composée d’un chef maquilleur et de
+              maquilleurs. Il veille dans l’exercice de ses fonctions au respect des règles d’hygiène et de sécurité.
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Monteur vidéo', monteur_videos_path %>
+        <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample11" aria-expanded="false">
+        <div class="collapse" id="collapseExample11">
+            <div class="well">
+       Effectue le montage des images et des sons de films, de reportages, d'émissions, ... à partir des rushes de
+              tournages, d'éléments d'archives, selon les intentions artistiques définies préalablement.
+              Peut élaborer des trucages vidéo.
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br> 
+ <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"> <%= link_to 'Perchistes', perchistes_path %>
+         <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample12" aria-expanded="false">
+        <div class="collapse" id="collapseExample12">
+            <div class="well">
+              Sur le plateau, le perchman promène son micro muni d’une perche au dessus de leur tête pendant toute la
+              durée
+              des dialogues, en veillant à ne pas faire d’ombre avec sa perche. Inutile de préciser que ce qui constitue
+              sa
+              principale mission exige une bonne résistance physique, surtout s’il travaille à l’extérieur !
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Photographes', photographes_path %>
+        <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample13" aria-expanded="false">
+        <div class="collapse" id="collapseExample13">
+            <div class="well">
+      Le photographe est un professionnel de l'image. Il est capable de réaliser des prises de vue dans les
+              domaines de la mode, du mariage, de l'actualité, du paysage... Il est avant tout un créatif. Toutefois, il
+              peut consacrer une grande partie de son activité à la commercialisation de ses photos et au démarchage de
+              nouveaux clients..
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br> 
+ <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Producteurs', producteurs_path %>
+         <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample14" aria-expanded="false">
+        <div class="collapse" id="collapseExample14">
+            <div class="well">
+              Le producteur travaille avec l'ensemble des collaborateurs qui interviennent sur le tournage d'un film ou
+              d'une émission. Il intervient tout au long de la vie d'un projet, c'est-à-dire de la réalisation du
+              scénario à sa distribution en salles.
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Réalisateurs', realisateurs_path %>
+        <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample15" aria-expanded="false">
+        <div class="collapse" id="collapseExample15">
+            <div class="well">
+      Le réalisateur est une sorte de chef d'orchestre. Il doit s'assurer que chaque équipe mène à bien son
+              travail, en fonction du ton, de l'atmosphère du projet final qu'il a en tête. Pour cela, le réalisateur est
+              partout. Avant le tournage : <br>
+              • Il réalise le découpage technique du scénario en différents plans, avec un story-board.<br>
+              • Il traite avec les producteurs et l'équipe casting.<br>
+              • Il effectue des repérages pour déterminer les lieux de tournage.<br>
+              Pendant la période de tournage :<br>
+              • Il dirige les acteurs, leur indique comment jouer.<br>
+              • Il place les cameramen et leur donne des consignes.<br>
+              • Il s'accorde avec le décorateur.<br>
+              • Il travaille avec les différents membres de l'équipe technique (l'ingénieur son, le chef opérateur, le
+              directeur de la photographie...).<br>
+              • Dans le cas, un peu différent, du réalisateur d'une émission de télévision, il dirige, non pas les
+              acteurs, mais l'ensemble des caméras réparties sur le plateau, indiquant où, quand, et comment filmer.<br>
+              Les tâches étant très diversifiées, il est aidé d'un ou plusieurs assistants-réalisateurs. Une fois le
+              tournage achevé, son travail ne s'arrête pas là :<br>
+              • Il supervise le mixage, c'est-à-dire l'intégration de la bande-son au film.<br>
+              • Il reste en contact avec le chef monteur, avec qui il discute des choix artistiques.<br>
+              • Il participe à la promotion du film en répondant à des interviews, et se rend sur les festivals.
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br> 
+ <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Régiseurs', regiseurs_path %>
+         <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample16" aria-expanded="false">
+        <div class="collapse" id="collapseExample16">
+            <div class="well">
+              Le régisseur général conçoit et supervise la mise en œuvre des dispositifs techniques nécessaires à la
+              conduite d’un spectacle, d’un tournage ou de tout autre évènement culturel. Il coordonne les solutions
+              techniques en réponse aux exigences de sécurité, aux demandes des artistes et aux fiches techniques des
+              lieux.
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Scénaristes', scenaristes_path %>
+        <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample17" aria-expanded="false">
+        <div class="collapse" id="collapseExample17">
+            <div class="well">
+       Le travail de scénariste varie beaucoup en fonction du support pour lequel il écrit :
+              • Pour le cinéma : c'est le travail de scénariste tel qu'on l'imagine. Avant que le scénario ne soit écrit
+              à proprement parler, les producteurs, le réalisateur et le scénariste se mettent d'accord sur un synopsis.
+              Puis le scénariste écrit les dialogues, en respectant un découpage des scènes et des indications scéniques
+              précises avec un vocabulaire spécifique. Le jeu d'acteur, le travail de photographie et de réalisation
+              jouent un rôle très important dans le résultat final. Une histoire tournée en plein air dans le désert par
+              exemple n'aura pas la même résonance que si elle se fait en huis clos, dans un appartement de ville. Le
+              plus souvent, le scénario prend en compte le contexte du film dès le départ. Il est même parfois écrit pour
+              un acteur en particulier.
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br> 
+ <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"> <%= link_to 'Scriptes', scriptes_path %>
+         <img src="https://png.icons8.com/ios/50/000000/documentary.png" data-toggle="collapse" data-target="#collapseExample18" aria-expanded="false">
+        <div class="collapse" id="collapseExample18">
+            <div class="well">
+             Le scripte a pour mission de veiller à la continuité et à la cohérence visuelle et sonore d’un film pendant
+              la phase où le scénario se transforme en objet visuel par l’intermédiaire du tournage. Avant, pendant et
+              après le tournage, il travaille en étroite collaboration avec le réalisateur et prend complètement en
+              charge,
+              en tenant compte des exigences artistiques de celui-ci, l’ensemble des détails incontournables pour que
+              tous
+              les plans du film soient « raccords » et « montables ».
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  
+
+ </div>
 </body>

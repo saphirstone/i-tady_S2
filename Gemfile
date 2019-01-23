@@ -12,6 +12,10 @@ gem 'sass-rails', '~> 5.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+gem 'aws-sdk-kinesisvideo', '~> 1.4'
+gem 'paperclip', '~> 6.1'
+gem 'video', '~> 0.0.2'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'merit'

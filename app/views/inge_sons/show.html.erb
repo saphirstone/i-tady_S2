@@ -1,13 +1,40 @@
+<head>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.cards {
+display: grid;
+grid-gap: 1rem;
+grid-template-column­s: repeat(auto-fit, minmax(0px, 1fr));
+padding: 1rem;
+}
+
+.card {
+border: 1px solid #ccc;
+box-shadow: 3px 3px 3px #rgba(73, 98, 104,0.1);
+padding: 2rem 1rem;
+
+}
+
+</style>
+<link href="//­netdna.bootstrapcdn.c­om/bootstrap/3.2.0/­css/­bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> <script src="//­netdna.bootstrapcdn.c­om/bootstrap/3.2.0/­js/­bootstrap.min.js"></­script>
+<link rel="stylesheet" href="https://­maxcdn.bootstrapcdn.c­om/font-awesome/­4.7.0/css/­font-awesome.min.css">
+<script src="https://­code.jquery.com/­jquery-3.3.1.js"></script>
+</head>
+<body>
 <p id="notice"><%= notice %></p>
 
 
 
 
 
-
-<h2>
+<div class="row">
+<h2 class="text-center">
   <%= link_to('Voir le profil', user_path(@inge_son.user_id)) %>
 </h2>
+<div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
 <p>
   <strong>Nom et prénom:</strong>
   <%= @inge_son.nom_et_prenom %>
@@ -41,4 +68,8 @@
   <%= link_to 'Edit', edit_inge_son_path(@inge_son) %> |
   <%= link_to 'Delete', @inge_son, method: :delete, data: { confirm: "Êtes-vous sure ?" } %> |
 <% end %>
-<%= link_to 'Back', inge_sons_path %>
+</div>
+</div>
+</div>
+</div>
+<div class="buttn"><%= link_to 'Back', inge_sons_path %></div>

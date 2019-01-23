@@ -13,7 +13,13 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
 <%# --------------bouton pour voir la liste des jobs-------------------%>
-          <li><%= link_to 'Voir tous les métiers', show_listejob_path %></li>
+          <li class="drowpdown">
+           <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tous les métiers<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li><%=link_to 'Cinématographie', show_listecat_path%></li>
+          <li><%=link_to 'Métiers du web', show_listedev_path%></li>
+          </ul>
+          </li>
 <%#--------------------------------------------------------------------%>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.name %> <span class="caret"></span></a>

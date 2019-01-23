@@ -1,140 +1,182 @@
+<head>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.cards {
+display: grid;
+grid-gap: 1rem;
+grid-template-column­s: repeat(auto-fit, minmax(0px, 1fr));
+padding: 1rem;
+}
+
+.card {
+border: 1px solid #ccc;
+box-shadow: 3px 3px 3px #rgba(73, 98, 104,0.1);
+padding: 2rem 1rem;
+
+}
+
+</style>
+<link href="//­netdna.bootstrapcdn.c­om/bootstrap/3.2.0/­css/­bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> <script src="//­netdna.bootstrapcdn.c­om/bootstrap/3.2.0/­js/­bootstrap.min.js"></­script>
+<link rel="stylesheet" href="https://­maxcdn.bootstrapcdn.c­om/font-awesome/­4.7.0/css/­font-awesome.min.css">
+<script src="https://­code.jquery.com/­jquery-3.3.1.js"></script>
+</head>
 <body>
   <div class="row">
-
-    <head>
-
-    </head>
-
-    <div class="col-lg-6 col-lg-offset-3 well">
+    
 
       <h1 class="text-center">Les metiers du Web</h1>
+<div class="row">
 
-
-
-
-
-
-      <div class="real">
-        <%= link_to 'Développeur mobile', dev_mobiles_path %>
-        <i class="fa-angle-down" data-toggle="collapse" data-target="#collapseExample0" aria-expanded="false"></i>
-
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"> <%= link_to 'Développeur mobile', dev_mobiles_path %>
+         <img src="https://png.icons8.com/dotty/50/000000/developer.png" data-toggle="collapse" data-target="#collapseExample0" aria-expanded="false">
         <div class="collapse" id="collapseExample0">
-          <div class="well">
-            Le développeur mobile réalise des applications : il peut s’agir de la version mobile d’un site Internet ou
-            d’une véritable application consultable sur smartphone et/ou tablette. Mais plus précisément, voici ses
-            principales missions :
+            <div class="well">
+             Le développeur mobile réalise des applications : il peut s’agir de la version mobile d’un site Internet ou
+              d’une véritable application consultable sur smartphone et/ou tablette. Mais plus précisément, voici ses
+              principales missions :<br>
 
-            – Il analyse le cahier des charges fourni par le chef de projet web mobile avec qui il travaille en étroite
-            collaboration. Ce cahier des charges reprend les besoins du client ainsi que les spécifications à
-            respecter.
+              – Il analyse le cahier des charges fourni par le chef de projet web mobile avec qui il travaille en étroite
+              collaboration. Ce cahier des charges reprend les besoins du client ainsi que les spécifications à
+              respecter.<br>
 
-            – Il choisit une solution technique en fonction des spécificités du projet
+              – Il choisit une solution technique en fonction des spécificités du projet.<br>
 
-– Il réalise l’application. Pendant le développement technique, il reste en contact avec l’équipe chargée du web design ou de la production du contenu pour conserver une cohérence dans le projet.
+              – Il réalise l’application. Pendant le développement technique, il reste en contact avec l’équipe chargée du web design ou de la production du contenu pour conserver une cohérence dans le projet.<br>
 
-– Il réalise des tests pour vérifier que l’application mobile répond bien au cahier des charges.
+              – Il réalise des tests pour vérifier que l’application mobile répond bien au cahier des charges.<br>
 
-– Eventuellement, il peut se charger de la maintenance de l’application en cas de bug, mais aussi du développement de nouvelles fonctionnalités.
+              – Eventuellement, il peut se charger de la maintenance de l’application en cas de bug, mais aussi du développement de nouvelles fonctionnalités.<br>
 
-A noter que le développeur mobile peut travailler en freelance, en agence, mais aussi en entreprise (notamment pour les grands comptes disposant d’un service informatique).
+              A noter que le développeur mobile peut travailler en freelance, en agence, mais aussi en entreprise (notamment pour les grands comptes disposant d’un service informatique).
+            </div>
           </div>
-        </div>
       </div>
-
-      <div class="real">
-        <%= link_to 'Référenceur web', referenceur_webs_path %>
-        <i class="fa-angle-down" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample1">
-          <div class="well">
-            L'exercice du métier d'intégrateur web réunit différentes missions parmi lesquelles :
-            • réunir et assembler les différents éléments qui composent un site internet (pour la mise en page :
-            feuilles de styles, menu, pied de page, contenu des pages) ;
-            • traduire les maquettes graphiques dans un langage HTML adapté à la publication d'un site internet
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="real">
-        <%= link_to 'Integrateur web', integrateur_webs_path %>
-        <i class="fa-angle-down" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample2">
-          <div class="well">
-            Le réalisateur est une sorte de chef d'orchestre. Il doit s'assurer que chaque équipe mène à bien son
-            travail, en fonction du ton, de l'atmosphère du projet final qu'il a en tête. Pour cela, le réalisateur est
-            partout. Avant le tournage :
-            Il réalise le découpage technique du scénario en différents plans, avec un story-board.
-            Il traite avec les producteurs et l'équipe casting.
-            Il effectue des repérages pour déterminer les lieux de tournage.
-
-          </div>
-        </div>
-      </div>
-
-      <div class="real">
-        <%= link_to 'Web designer', web_designers_path %>
-        <i class="fa-angle-down" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample3">
-          <div class="well">
-            Le webdesigner ou graphiste Internet est en charge de la conception graphique et visuelle ainsi que de
-            l’ergonomie d’un site web et de ses services associés (newsletter, e-mailing…).
-
-          </div>
-        </div>
-      </div>
-
-      <div class="real">
-        <%= link_to 'Web Master', web_masters_path %>
-        <i class="fa-angle-down" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample4">
-          <div class="well">
-            Assurer les relations avec l’hébergeur du site.
-            Concevoir les pages web ou participer à la rédaction du cahier des charges pour faire réaliser le site par
-            un sous-traitant.
-            Gérer les incidents techniques de premier niveau dans l’exploitation du site web.
-            Participer au choix des sous-traitants éventuels.
-          </div>
-        </div>
-      </div>
-
-      <div class="real">
-        <%= link_to 'Flash designer', flash_designers_path %>
-        <i class="fa-angle-down" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample5">
-          <div class="well">
-            Mais d’où viennent ces animations colorées et interactives que vous rencontrez sur le web ? Eh bien du
-            serveur Flash ! Créé il y a plus 10 ans, le langage de programmation « Action Script » compose la partie
-            dynamique d’une animation. Ce format de fichier d’extension permet la mise en ligne d’images, vidéos, sons,
-            ou code pour interagir avec les utilisateurs.
-          </div>
-        </div>
-      </div>
-
-      <div class="real">
-        <%= link_to 'Chef de projet web', chef_de_projet_webs_path %>
-        <i class="fa-angle-down" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false"></i>
-
-        <div class="collapse" id="collapseExample6">
-          <div class="well">
-            A la fois fort en technique internet et passionné de marketing, le Chef de projet web est avant tout un
-            coordinateur. Que ce soit en agence de communication, en SSII, ou en entreprise, il est responsable de la
-            création, de la mise en œuvre et de la gestion de projets internet. Pour ce faire, il est l’interface
-            d’équipes techniques, de création et de production.
-            Sous cette appellation, on regroupe des métiers qui peuvent être très différents dans le quotidien, tels
-            que Chef de projet multimédia, Chef de projet SEO, Chef de projet e-commerce, Chef de projet web éditorial,
-            Chef de projet internet fonctionnel, Chef de projet intranet, etc.
-            Nous détaillons ci-après une fonction « généraliste » et mettrons en ligne dans un second temps les fiches
-            métiers citées ci-dessus.
-
-          </div>
-        </div>
-      </div>
-
+      </h4>
     </div>
   </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Référenceur web', referenceur_webs_path %>
+        <img src="https://png.icons8.com/dotty/50/000000/developer.png" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false">
+        <div class="collapse" id="collapseExample1">
+            <div class="well">
+        L'exercice du métier d'intégrateur web réunit différentes missions parmi lesquelles :<br>
+              • réunir et assembler les différents éléments qui composent un site internet (pour la mise en page :
+              feuilles de styles, menu, pied de page, contenu des pages) ;<br>
+              • traduire les maquettes graphiques dans un langage HTML adapté à la publication d'un site internet
+
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br>
+ <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Integrateur web', integrateur_webs_path %>
+         <img src="https://png.icons8.com/dotty/50/000000/developer.png" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false">
+        <div class="collapse" id="collapseExample2">
+            <div class="well">
+             Le réalisateur est une sorte de chef d'orchestre. Il doit s'assurer que chaque équipe mène à bien son
+              travail, en fonction du ton, de l'atmosphère du projet final qu'il a en tête. Pour cela, le réalisateur est
+              partout. Avant le tournage :<br>
+              -Il réalise le découpage technique du scénario en différents plans, avec un story-board.<br>
+              -Il traite avec les producteurs et l'équipe casting.<br>
+              -Il effectue des repérages pour déterminer les lieux de tournage.
+
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Web designer', web_designers_path %>
+        <img src="https://png.icons8.com/dotty/50/000000/developer.png" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false">
+        <div class="collapse" id="collapseExample3">
+            <div class="well">
+        Le webdesigner ou graphiste Internet est en charge de la conception graphique et visuelle ainsi que de
+              l’ergonomie d’un site web et de ses services associés (newsletter, e-mailing…)
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br>
+ <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Web Master', web_masters_path %>
+         <img src="https://png.icons8.com/dotty/50/000000/developer.png" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false">
+        <div class="collapse" id="collapseExample4">
+            <div class="well">
+            Assurer les relations avec l’hébergeur du site.
+              Concevoir les pages web ou participer à la rédaction du cahier des charges pour faire réaliser le site par
+              un sous-traitant.
+              Gérer les incidents techniques de premier niveau dans l’exploitation du site web.
+              Participer au choix des sous-traitants éventuels.
+
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Flash designer', flash_designers_path %>
+        <img src="https://png.icons8.com/dotty/50/000000/developer.png" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false">
+        <div class="collapse" id="collapseExample5">
+            <div class="well">
+       Mais d’où viennent ces animations colorées et interactives que vous rencontrez sur le web ? Eh bien du
+              serveur Flash ! Créé il y a plus 10 ans, le langage de programmation « Action Script » compose la partie
+              dynamique d’une animation. Ce format de fichier d’extension permet la mise en ligne d’images, vidéos, sons,
+              ou code pour interagir avec les utilisateurs.
+            
+      </div>
+    </div>
+  </div>
+  </h4>
+</div>
+</div>
+<br>
+<div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+        <h4 class="text-center"><%= link_to 'Chef de projet web', chef_de_projet_webs_path %>
+         <img src="https://png.icons8.com/dotty/50/000000/developer.png" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false">
+        <div class="collapse" id="collapseExample6">
+            <div class="well">
+            A la fois fort en technique internet et passionné de marketing, le Chef de projet web est avant tout un
+              coordinateur. Que ce soit en agence de communication, en SSII, ou en entreprise, il est responsable de la
+              création, de la mise en œuvre et de la gestion de projets internet. Pour ce faire, il est l’interface
+              d’équipes techniques, de création et de production.<br>
+              Sous cette appellation, on regroupe des métiers qui peuvent être très différents dans le quotidien, tels
+              que Chef de projet multimédia, Chef de projet SEO, Chef de projet e-commerce, Chef de projet web éditorial,
+              Chef de projet internet fonctionnel, Chef de projet intranet, etc.<br>
+              Nous détaillons ci-après une fonction « généraliste » et mettrons en ligne dans un second temps les fiches
+              métiers citées ci-dessus.
+
+            </div>
+          </div>
+      </div>
+      </h4>
+    </div>
+  </div>
+
+  </div>
+  </body>

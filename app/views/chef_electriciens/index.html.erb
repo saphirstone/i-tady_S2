@@ -1,10 +1,40 @@
+<head>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.cards {
+display: grid;
+grid-gap: 1rem;
+grid-template-column­s: repeat(auto-fit, minmax(0px, 1fr));
+padding: 1rem;
+}
+
+.card {
+border: 1px solid #ccc;
+box-shadow: 3px 3px 3px #rgba(73, 98, 104,0.1);
+padding: 2rem 1rem;
+
+}
+
+</style>
+<link href="//­netdna.bootstrapcdn.c­om/bootstrap/3.2.0/­css/­bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> <script src="//­netdna.bootstrapcdn.c­om/bootstrap/3.2.0/­js/­bootstrap.min.js"></­script>
+<link rel="stylesheet" href="https://­maxcdn.bootstrapcdn.c­om/font-awesome/­4.7.0/css/­font-awesome.min.css">
+<script src="https://­code.jquery.com/­jquery-3.3.1.js"></script>
+</head>
+
+<body>
+  <div class="row">
 <p id="notice"><%= notice %></p>
 
-<h1>Chef Electriciens</h1>
+<h1 class="text-center">Chef Electriciens</h1>
 
 <% @chef_electriciens.each do |chef_electricien| %>
-                <div class="col-lg-3 col-md-6 col-12">
+               <div class="sri">
                     <!-- Single Package -->
+<div class="col-sm-6">
+    <div class="card well">
+      <div class="card-body">
+
                     <div class="single-package">
                         
                         <div class="trip-details">
@@ -23,8 +53,13 @@
                     </div>
                     
                 </div>
-            <% end %> 
-
+            </div>
+</div>
+                
+<% end %> 
+    </div>
+                </div>
+</div>
 <br>
 
 <div class="buttn"><%= link_to 'New Chef Electricien', new_chef_electricien_path %></div>

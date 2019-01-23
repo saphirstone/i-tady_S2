@@ -3,11 +3,27 @@
 
 </head> 
 
-  <div class="col-lg-6 col-lg-offset-3 well">
 
   <h1 class="text-center">Tous les métiers</h1>
-    <p> <%= link_to 'Cinématographie', show_listecat_path %> </p>
-    <p> <%= link_to 'Développement web et programmation', show_listedev_path %>  </p>
+ <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="text-center"><%=link_to 'Cinématographie', show_listecat_path%>
+         
+      </div>
+      </h2>
+    </div>
+  </div>
+ 
+ <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="text-center"><%=link_to 'Métiers du web', show_listedev_path%>
+         
+      </div>
+      </h2>
+    </div>
+  </div>
 
 </div>
 </div>

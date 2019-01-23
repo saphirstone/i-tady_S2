@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :realisateurs
   get 'team', to:'home#team'
   
+
+scope "developpeur" do
   resources :chef_de_projet_webs
   resources :flash_designers
   resources :web_masters
@@ -11,6 +13,29 @@ Rails.application.routes.draw do
   resources :integrateur_webs
   resources :referenceur_webs
   resources :dev_mobiles
+end
+
+  resources :devs
+
+  get 'show/show'
+  get 'show/listecat'
+  get 'show/listejob'
+  get 'show/listedev'
+
+
+
+  resources :show
+
+scope "cinematographie" do
+  resources :acteurs
+  resources :monteur_videos
+  resources :producteurs
+  resources :makeups
+  resources :regiseurs
+  resources :perchmen
+  resources :chef_decorateurs
+  resources :chef_operateurs
+  resources :assistant_realisateurs
   resources :photographes
   resources :vfxes
   resources :inge_sons
@@ -21,24 +46,9 @@ Rails.application.routes.draw do
   resources :scenaristes
   resources :cadreurs
   resources :perchistes
-  resources :devs
-
-  get 'show/show'
-  get 'show/listecat'
-  get 'show/listejob'
-  get 'show/listedev'
+end
 
 
-  resources :show
-  resources :acteurs
-  resources :monteur_videos
-  resources :producteurs
-  resources :makeups
-  resources :regiseurs
-  resources :perchmen
-  resources :chef_decorateurs
-  resources :chef_operateurs
-  resources :assistant_realisateurs
   resources :posts
   resources :comments, only: [:create, :destroy]
   devise_for :users

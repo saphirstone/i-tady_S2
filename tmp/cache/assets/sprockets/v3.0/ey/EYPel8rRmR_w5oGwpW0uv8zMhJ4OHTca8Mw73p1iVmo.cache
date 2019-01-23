@@ -1,0 +1,5 @@
+I"C(function() {
+  require(active_admin / base);
+
+}).call(this);
+:ET

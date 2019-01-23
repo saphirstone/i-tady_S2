@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-lg-4 col-lg-offset-4 well">
-    <h3 class="text-center">Motde passe oublié?</h3>
+    <h3 class="text-center">Mot de passe oublié?</h3>
     <br>
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <% if resource.errors.any? %>
@@ -11,10 +11,10 @@
       <% end %>
       <div class="form-group">
         <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control', autofocus: true, placeholder: 'email@example.com' %>
+        <%= f.email_field :email, class: 'form-control', autofocus: true, placeholder: 'email@exemple.com' %>
       </div>
       <div class="actions">
-        <%= f.submit 'Reset Password', class: 'btn btn-primary' %>
+        <%= f.submit 'Réinitialiser le mot de passe', class: 'btn btn-primary' %>
       </div>
     <% end %>
     <br>
